@@ -21,7 +21,7 @@ export default function App () {
         <Route path='/forgotPw' exact strict component={ForgotPwScreen} />
         <Route path='/login' exact component={LoginScreen} />
         <Route path='/forgotPw/:id' component={ResetPassword} />
-        <ProtectedRoute path='/marketing' exact component={Marketing} />
+        <Route path='/marketing' exact component={Marketing} />
         <ProtectedRoute exact path='/' component={Home} />
         <Route path='**' render={() => <div>404</div>} />
       </Switch>

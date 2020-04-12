@@ -15,17 +15,20 @@ const NavBar = (prop) => {
   //   [dispatch]
   // )
   return (
-    <MaterialUI.AppBar position='static' color='default' elevation={0} className={classes.appBar}>
-      <MaterialUI.Toolbar className={classes.toolbar}>
-        <MaterialUI.Typography variant='h6' color='inherit' noWrap className={classes.toolbarTitle}>
-          <Link className={classes.toolbarTitle} to='/'>
-           Company name
-          </Link>
-        </MaterialUI.Typography>
-        {prop.restrict === false ? <MarketingNav /> : ''}
-        {prop.authenticated === true ? <LogoutNav /> : prop.hideAll === true ? ' ' : <RegistrationNav />}
-      </MaterialUI.Toolbar>
-    </MaterialUI.AppBar>
+    <div>
+      <MaterialUI.AppBar position='static' color='default' elevation={0} className={classes.appBar}>
+        <MaterialUI.Toolbar className={classes.toolbar}>
+          <MaterialUI.Typography variant='h6' color='inherit' noWrap className={classes.toolbarTitle}>
+            <Link className={classes.toolbarTitle} to='/'>
+                Anna's Talent Acquisition
+            </Link>
+          </MaterialUI.Typography>
+          {prop.restrict === false ? <MarketingNav /> : ''}
+          {prop.authenticated === true ? <LogoutNav /> : prop.hideAll === true ? ' ' : <RegistrationNav />}
+          {prop.applyNow === true ? <ApplyNow test={prop.onhandle} /> : ''}
+        </MaterialUI.Toolbar>
+      </MaterialUI.AppBar>
+    </div>
   )
 }
 
@@ -44,6 +47,17 @@ const RegistrationNav = () => {
     <nav>
       <NavButton path='/login' name='Login' />
       <NavButton path='/signUp' name='SignUp' />
+    </nav>
+  )
+}
+
+const ApplyNow = (prop) => {
+  const classes = useStyles()
+  return (
+    <nav>
+      <MaterialUI.Button color='primary' variant='outlined' className={classes.link} onClick={prop.test}>
+      JOIN NOW
+      </MaterialUI.Button>
     </nav>
   )
 }

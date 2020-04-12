@@ -10,6 +10,7 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import IconButton from '@material-ui/core/IconButton'
+import Modal from '@material-ui/core/Modal'
 
 export default () => {
   return {
@@ -23,6 +24,7 @@ export default () => {
     AppBar,
     Toolbar,
     InputAdornment,
-    IconButton
+    IconButton,
+    Modal
   }
 }
