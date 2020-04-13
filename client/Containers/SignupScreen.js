@@ -46,7 +46,7 @@ class SignupScreen extends Component {
                 emailErrorMg
             })
         }
-
+        
         const isPwResult =  requiredLength(password)
         const passwordErrorMg = Validationfunc(isPwResult,'Password must be 8 characters long')
         if(passwordErrorMg){

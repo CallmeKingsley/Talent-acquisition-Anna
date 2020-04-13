@@ -25,12 +25,15 @@
   "dependencies": {
     "@material-ui/core": "^4.9.7",
     "@material-ui/icons": "^4.9.1",
+    "@types/date-fns": "^2.6.0",
     "apisauce": "^1.1.1",
     "babel-polyfill": "^6.26.0",
     "cors": "^2.8.5",
+    "date-fns": "^2.12.0",
     "dotenv": "^8.2.0",
     "express-validator": "^6.4.0",
     "history": "^4.10.1",
+    "material-table": "^1.57.2",
     "nodemailer": "^6.4.6",
     "prop-types": "^15.7.2",
     "ramda": "^0.27.0",
@@ -70,6 +73,6 @@
     "standard": "^14.3.3",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.8",
-    "webpack-dev-server": "^3.8.0"
+    "webpack-dev-server": "^3.10.3"
   }
 }

@@ -6,8 +6,8 @@ import 'babel-polyfill'
 
 export const reducers = combineReducers({
   todo: require('./TodoRedux').reducer,
-  user: require('./UserRedux').reducer
-
+  user: require('./UserRedux').reducer,
+  applicantion: require('./ApplicantRedux').reducer
 })
 
 let storeInstance = null

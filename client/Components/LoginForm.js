@@ -26,7 +26,7 @@ const LoginForm = (prop) => {
           <Link to='/forgotPw'>Forgot password? </Link>
           <InputField
             id='password'
-            type={false} label='password'
+            type='password' label='password'
             name='password' autoComplete='current-password'
             autoFocus={false} handleChange={prop.handleChange('password')}
             margin='normal'

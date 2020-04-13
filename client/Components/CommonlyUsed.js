@@ -7,7 +7,7 @@ const MaterialUI = MaterialInport()
 export const InputField = (prop) => {
   return (
     <MaterialUI.TextField
-      type={prop.type ? 'text' : 'password'}
+      type={prop.type}
       error={prop.error}
       variant='outlined'
       margin={prop.margin}
@@ -23,9 +23,7 @@ export const InputField = (prop) => {
     />
   )
 }
-InputField.defaultProps = {
-  type: true
-}
+
 
 export const GridInputField = (prop) => {
   return (

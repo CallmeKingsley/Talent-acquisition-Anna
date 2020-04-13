@@ -3,19 +3,22 @@ const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 
 const HTMLWebPackPluginConfig = new HTMLWebpackPlugin({
-  template: path.join(__dirname, '/Client/index.html'),
+  template: path.join(__dirname, '/client/index.html'),
   filename: 'index.html',
   inject: 'body'
 })
 
 module.exports = {
-  entry: path.join(__dirname, '/Client/index.js'),
+  entry: path.join(__dirname, '/client/index.js'),
   module: {
     rules: [{
       test: /\.js$/,
       exclude: /node_modules/,
       loader: 'babel-loader'
     }, { test: /\.css$/, use: 'css-loader' }]
+  },
+  devServer: {
+    watchContentBase: true
   },
   output: {
     filename: 'transform.js',

@@ -20,7 +20,7 @@ const NavBar = (prop) => {
         <MaterialUI.Toolbar className={classes.toolbar}>
           <MaterialUI.Typography variant='h6' color='inherit' noWrap className={classes.toolbarTitle}>
             <Link className={classes.toolbarTitle} to='/'>
-                Anna's Talent Acquisition
+            Anna's Talent Acquisition           
             </Link>
           </MaterialUI.Typography>
           {prop.restrict === false ? <MarketingNav /> : ''}
