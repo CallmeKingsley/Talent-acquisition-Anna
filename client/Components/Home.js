@@ -1,46 +1,57 @@
 import React from 'react'
 import MaterialInport from '../materialUI'
 import MaterialTable from 'material-table'
+import  './Styles/test.css'
 const MaterialUI = MaterialInport()
 
-const Home = (prop) => {
+const Home = (props) => {
   return (
-    <MaterialUI.Container maxWidth='md'>
-      <MaterialUI.Typography variant='h6' color='textPrimary' gutterBottom>
-           Home Screen
+    <MaterialUI.Container maxWidth='75%'>
+      <MaterialUI.Typography variant='h3' color='textPrimary' gutterBottom>
+          Applicant information
       </MaterialUI.Typography>
-      <ApplicantTable/>
+      <div>
+         <ApplicantTable applicants = {props.applicants}/>
+      </div>
+     
     </MaterialUI.Container>
   )
 }
 
 const ApplicantTable = (props)=>{
+  const applicantsData = JSON.parse(JSON.stringify(props.applicants))
+
   const [state, setState] = React.useState({
     columns: [
-      { title: 'Name', field: 'name' },
-      { title: 'Surname', field: 'surname' },
-      { title: 'Birth Year', field: 'birthYear', type: 'numeric' },
-      {
-        title: 'Birth Place',
-        field: 'birthCity',
-        lookup: { 34: 'İstanbul', 63: 'Şanlıurfa' },
-      },
+      { title: 'FirstName', field: 'FirstName' },
+      { title: 'MiddleName', field: 'MiddlenName' },
+      { title: 'LastName', field: 'LastName' },
+      { title: 'State', field: 'State' },
+      { title: 'Email', field: 'Email' },
+      { title: 'Resume', field: 'Resume' },
     ],
-    data: [
-      { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 },
-      {
-        name: 'Zerya Betül',
-        surname: 'Baran',
-        birthYear: 2017,
-        birthCity: 34,
-      },
-    ],
+    data: applicantsData
+
   });
+
   return (
     <MaterialTable
       title="Editable Example"
       columns={state.columns}
       data={state.data}
+      style = {{width: '100%',backgroundColor:'green', color: 'white'}}
+      options={{
+        width: 900,
+        rowStyle: {
+          backgroundColor: '#eee',
+          color: 'black'
+        },
+        cellStyle: {
+          width: 200,
+          minWidth: 200
+        },
+        pageSize: 10
+      }}
       editable={{
         onRowAdd: (newData) =>
           new Promise((resolve) => {

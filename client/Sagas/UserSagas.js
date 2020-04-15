@@ -1,4 +1,5 @@
 import UserRedux, { UserSelector, UserType } from '../Redux/UserRedux'
+import ApplicantRedux from '../Redux/ApplicantRedux'
 import { select, put, call } from 'redux-saga/effects'
 import History from '../History'
 import { isNil } from 'ramda'
@@ -47,6 +48,9 @@ export function * loginUser (api, action) {
 
     if (responds.ok && !isNil(responds.data.user) && !isNil(userExist.data.user)) {
       yield put(UserRedux.loginUserSuccess(responds.data, false))
+      const applicants = yield call(api.getApplications)
+      yield put(ApplicantRedux.getApplication(applicants))
+      console.log(applicants)
       History.push('/')
     } else {
       yield put(UserRedux.loginUserFailure({ error: true, message: 'Invalid credential' }))

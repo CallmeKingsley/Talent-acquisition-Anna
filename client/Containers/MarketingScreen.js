@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import ApplicantRedux from '../Redux/ApplicantRedux'
+import ApplicantRedux,{ApplicantSelector} from '../Redux/ApplicantRedux'
 import NavBar from '../Components/Navbar'
 import ApplicationModel from '../Components/ApplicationForm'
 class MarketingScreen extends Component {
@@ -23,6 +23,12 @@ class MarketingScreen extends Component {
       this.handleClose = this.handleClose.bind(this)
       this.handleOpen = this.handleOpen.bind(this)
       this.handleApplNowBtn = this.handleApplNowBtn.bind(this)
+  }
+
+  componentWillMount(){
+    console.log('marketing')
+
+    //xconsole.log(()=>{ApplicantSelector.allAppplicants()})
   }
 
  handleClose =()=>{

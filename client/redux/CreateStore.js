@@ -9,7 +9,7 @@ const transformerConfig = {
   whitelistPerReducer: {
     todo: ['todoList'],
     user: ['user', 'authenticated', 'errors', 'userId', 'loading'],
-    applicantion:['loading']
+    applications:['loading','applicants']
   },
   blacklistPerReducer: {
     analytics: [

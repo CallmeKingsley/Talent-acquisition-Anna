@@ -18,9 +18,9 @@ const NavBar = (prop) => {
     <div>
       <MaterialUI.AppBar position='static' color='default' elevation={0} className={classes.appBar}>
         <MaterialUI.Toolbar className={classes.toolbar}>
-          <MaterialUI.Typography variant='h6' color='inherit' noWrap className={classes.toolbarTitle}>
+          <MaterialUI.Typography variant='h4' color='inherit' noWrap className={classes.toolbarTitle}>
             <Link className={classes.toolbarTitle} to='/'>
-            Anna's Talent Acquisition           
+            SMART EMPLOYERS          
             </Link>
           </MaterialUI.Typography>
           {prop.restrict === false ? <MarketingNav /> : ''}

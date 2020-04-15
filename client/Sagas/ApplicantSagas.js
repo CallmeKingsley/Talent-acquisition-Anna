@@ -18,3 +18,11 @@ export function * createApplication (api, action) {
     yield put(ApplicantRedux.createApplicationFailure({ error: true, message: 'Network issue' }))
   }
 }
+
+// export function * getApplication (api, action){
+//   try{
+//    console.log(action)
+//   }catch(e){ h
+//     console.log(e)
+//   }
+// }

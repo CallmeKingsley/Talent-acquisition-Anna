@@ -21,13 +21,16 @@ const createApi = (baseURL = API_URL) => {
 
   const createApplication  = (data) => api.post('applicants/applicant',data)
 
+  const getApplications = ()=> api.get('applicants/applicant')
+
   return {
     createAccount,
     retriveUserInfo,
     checkAvaliableEmail,
     resetPassword,
     resetPassworddata,
-    createApplication
+    createApplication,
+    getApplications
   }
 }
 

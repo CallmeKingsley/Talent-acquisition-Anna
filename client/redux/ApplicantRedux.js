@@ -4,6 +4,7 @@ import Immutable from 'seamless-immutable'
 /* ------------Type and Action creation ----------- */
 const { Types, Creators } = createActions({
     createApplication: ['user'],
+    getApplication: ['applicants'],
     createApplicationFailure: ['error'],
     createApplicationSuccess: ['user', 'loading'],
 })
@@ -13,6 +14,7 @@ export default Creators
 
 /* ------------ Initial State ----------- */
 export const INITIAL_STATE = Immutable({
+    applicants: {},
     loading: {
         applicant: null
     },
@@ -22,7 +24,7 @@ export const INITIAL_STATE = Immutable({
 })
 /* ------------ Selectors ----------- */
 export const ApplicantSelector = {
-  error: state => state.errors.applicant
+  allAppplicants: state => state.applicants
 }
 
 /* ------------ Reducers ----------- */
@@ -31,6 +33,16 @@ export const createApplication = (state) =>
     loading: { ...state.loading, applicant: true },
     errors: { ...state.errors, applicant: null }
 })
+
+export const getApplication = (state, applicants) =>{
+  return state.merge({
+    applicants: applicants.applicants.data.Applications,
+    loading: { ...state.loading, applicant: true },
+    errors: { ...state.errors, applicant: null }
+})
+}
+
+  
 
 export const createApplicationFailure = (state,{error}) =>
   state.merge({
@@ -45,6 +57,7 @@ export const createApplicationSuccess = (state,{loading}) =>
 })
 
 export const reducer = createReducer(INITIAL_STATE, {
+  [Types.GET_APPLICATION]: getApplication,
   [Types.CREATE_APPLICATION]: createApplication,
   [Types.CREATE_APPLICATION_SUCCESS]: createApplicationSuccess,
   [Types.CREATE_APPLICATION_FAILURE]: createApplicationFailure,
