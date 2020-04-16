@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import App from './Containers/RootContainer'
 import 'babel-polyfill'
 
-import getStore from './Redux'
+import getStore from './redux'
 
 // create our store
 const { store, persistor } = getStore()

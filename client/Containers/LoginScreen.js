@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import LoginForm from '../Components/LoginForm'
 import { connect } from 'react-redux'
-import UserRedux from '../Redux/UserRedux'
+import UserRedux from '../redux/UserRedux'
 import Nav from '../Components/Navbar'
 import {isNil} from 'ramda'
 import {validateEmail,requiredLength,Validationfunc} from '../Validation'

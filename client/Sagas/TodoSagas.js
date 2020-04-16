@@ -1,4 +1,4 @@
-import TodoType, { TodoSelector } from '../Redux/TodoRedux'
+import TodoType, { TodoSelector } from '../redux/TodoRedux'
 import { select, put, call } from 'redux-saga/effects'
 
 export function * addTodo (api, action) {

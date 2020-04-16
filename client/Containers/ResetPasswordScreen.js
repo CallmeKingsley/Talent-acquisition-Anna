@@ -4,9 +4,9 @@ import ResetPasswordForm from '../Components/ResetPasswordForm'
 import {Text} from '../Components/CommonlyUsed'
 import {isNil, prop} from 'ramda'
 import { connect } from 'react-redux'
-import TodoRedux from '../Redux/TodoRedux'
+import TodoRedux from '../redux/TodoRedux'
 import NavBar from '../Components/Navbar'
-import UserRedux from '../Redux/UserRedux'
+import UserRedux from '../redux/UserRedux'
 
 class ResetPasswordScreem extends Component {
 

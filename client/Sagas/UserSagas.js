@@ -1,5 +1,5 @@
-import UserRedux, { UserSelector, UserType } from '../Redux/UserRedux'
-import ApplicantRedux from '../Redux/ApplicantRedux'
+import UserRedux, { UserSelector, UserType } from '../redux/UserRedux'
+import ApplicantRedux from '../redux/ApplicantRedux'
 import { select, put, call } from 'redux-saga/effects'
 import History from '../History'
 import { isNil } from 'ramda'

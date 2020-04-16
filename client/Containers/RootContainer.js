@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import TodoRedux from '../Redux/TodoRedux'
+import TodoRedux from '../redux/TodoRedux'
 import Footer from '../Components/Footer'
 import App from './App'
 

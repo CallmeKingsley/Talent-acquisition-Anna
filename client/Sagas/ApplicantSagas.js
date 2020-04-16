@@ -1,4 +1,4 @@
-import ApplicantRedux from '../Redux/ApplicantRedux'
+import ApplicantRedux from '../redux/ApplicantRedux'
 import { select, put, call } from 'redux-saga/effects'
 import { isNil } from 'ramda'
 import History from '../History'

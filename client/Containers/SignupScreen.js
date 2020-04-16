@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import SignupForm from '../Components/SignupForm'
 import { connect } from 'react-redux'
-import UserAction from '../Redux/UserRedux'
+import UserAction from '../redux/UserRedux'
 import Nav from '../Components/Navbar'
 import {Text} from '../Components/CommonlyUsed'
 import {isNil, prop} from 'ramda'

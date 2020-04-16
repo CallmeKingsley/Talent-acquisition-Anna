@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import ApplicantRedux,{ApplicantSelector} from '../Redux/ApplicantRedux'
+import ApplicantRedux,{ApplicantSelector} from '../redux/ApplicantRedux'
 import NavBar from '../Components/Navbar'
 import ApplicationModel from '../Components/ApplicationForm'
 import HomePage from '../Components/Home/HomePage'

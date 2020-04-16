@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import MaterialInport from '../materialUI'
 import { useStyles } from './Styles/NavBarStyles'
 import { useDispatch } from 'react-redux'
-import UserAction from '../Redux/UserRedux'
+import UserAction from '../redux/UserRedux'
 import { style } from './Styles/Navbar'
 const MaterialUI = MaterialInport()
 
