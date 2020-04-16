@@ -24,7 +24,6 @@ export const InputField = (prop) => {
   )
 }
 
-
 export const GridInputField = (prop) => {
   return (
     <MaterialUI.Grid item xs={12}>

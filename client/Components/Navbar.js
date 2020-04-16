@@ -4,7 +4,7 @@ import MaterialInport from '../materialUI'
 import { useStyles } from './Styles/NavBarStyles'
 import { useDispatch } from 'react-redux'
 import UserAction from '../Redux/UserRedux'
-
+import { style } from './Styles/Navbar'
 const MaterialUI = MaterialInport()
 
 const NavBar = (prop) => {
@@ -15,12 +15,12 @@ const NavBar = (prop) => {
   //   [dispatch]
   // )
   return (
-    <div>
+    <div style={style.navBarHeader}>
       <MaterialUI.AppBar position='static' color='default' elevation={0} className={classes.appBar}>
         <MaterialUI.Toolbar className={classes.toolbar}>
           <MaterialUI.Typography variant='h4' color='inherit' noWrap className={classes.toolbarTitle}>
             <Link className={classes.toolbarTitle} to='/'>
-            SMART EMPLOYERS          
+            SMART EMPLOYERS
             </Link>
           </MaterialUI.Typography>
           {prop.restrict === false ? <MarketingNav /> : ''}

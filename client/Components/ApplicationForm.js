@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2)
-  },
+  }
 }))
 
 const ApplicationForm = (prop) => {
@@ -48,7 +48,7 @@ const ApplicationForm = (prop) => {
   const body = (
     <div style={modalStyle} className={classes.paper}>
       <form noValidate onSubmit={prop.handleSubmit}>
-      <Text sizeType='h5' message='APPLICATION' />
+        <Text sizeType='h5' message='APPLICATION' />
         <MaterialUI.Grid container spacing={2}>
           <GridInputField
             id='FirstName'
@@ -76,7 +76,7 @@ const ApplicationForm = (prop) => {
             label='Email Address'
             name='email'
             autoComplete='email'
-            type ='email'
+            type='email'
             handleChange={prop.handleChange('Email')}
           />
           <GridInputField
@@ -84,7 +84,7 @@ const ApplicationForm = (prop) => {
             label='Phone Number'
             name='phoneNumber'
             autoComplete='phoneNumber'
-            type ='number'
+            type='number'
             handleChange={prop.handleChange('PhoneNumber')}
           />
           <GridInputField
@@ -106,14 +106,14 @@ const ApplicationForm = (prop) => {
             label='Resume'
             name='Resume'
             autoComplete='Resume'
-            type ='file'
+            type='file'
             handleChange={prop.handleChange('Resume')}
           />
           <GridInputField
             id='Avaliablity'
             name='avaliablity'
             autoComplete='avaliablity'
-            type ='date'
+            type='date'
             handleChange={prop.handleChange('Avaliablity')}
           />
         </MaterialUI.Grid>

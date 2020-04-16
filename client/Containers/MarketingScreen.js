@@ -3,6 +3,13 @@ import { connect } from 'react-redux'
 import ApplicantRedux,{ApplicantSelector} from '../Redux/ApplicantRedux'
 import NavBar from '../Components/Navbar'
 import ApplicationModel from '../Components/ApplicationForm'
+import HomePage from '../Components/Home/HomePage'
+import FirstStep from '../Components/Home/firstStepPage'
+import SecondStep from '../Components/Home/SecondStepPage'
+import ThirdStep from '../Components/Home/ThirdStepPage'
+import BusinessPage from '../Components/Home/BussinesPage'
+import VideoPage from '../Components/Home/VideoPage'
+import {style } from '../Components/Styles/MarketingScreenStyle'
 class MarketingScreen extends Component {
   constructor (props) {
     super(props)
@@ -73,10 +80,12 @@ event.preventDefault();
     return (
       <div>
         <NavBar restrict={false} hideAll applyNow applyNow onhandle ={this.handleApplNowBtn}/>
-        <h1>kingsleys web to help get a job</h1>
-        <button type='button' onClick={this.handleOpen}>
-        Open Modal
-        </button>
+        <HomePage style ={style.Pages}/>
+        <BusinessPage /> 
+        <FirstStep/>
+        <SecondStep/>
+        <ThirdStep/>
+        <VideoPage />
         <ApplicationModel isOpen ={this.state.isOpen} handleClose ={this.handleClose} handleChange ={this.handleChange} handleSubmit = {this.handleSubmit}/>
       </div>
     )

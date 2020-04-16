@@ -33,7 +33,7 @@ const SignupForm = (prop) => {
               id='password'
               error={prop.passwordErrorMg.error}
               helpText={prop.passwordErrorMg.helpText}
-              type= 'password'
+              type='password'
               label='password'
               name='password'
               autoComplete='current-password'
@@ -44,7 +44,7 @@ const SignupForm = (prop) => {
               id='Confirm-password'
               error={prop.confirmPwErrorMg.error}
               helpText={prop.confirmPwErrorMg.helpText}
-              type= 'password'
+              type='password'
               label='Confirm password'
               name='Confirm-password'
               autoComplete='current-password'

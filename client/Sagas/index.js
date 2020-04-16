@@ -3,11 +3,11 @@ import API from '../Services/Api'
 /* ------------ Types ----------- */
 import { TodoType } from '../Redux/TodoRedux'
 import { UserType } from '../Redux/UserRedux'
-import {ApplicantType} from '../Redux/ApplicantRedux'
+import { ApplicantType } from '../Redux/ApplicantRedux'
 /* ------------ sagas ----------- */
 import { addTodo } from './TodoSagas'
 import { createAccount, loginUser, passwordChangeRequest, passwordReset } from './UserSagas'
-import {createApplication} from './ApplicantSagas'
+import { createApplication } from './ApplicantSagas'
 
 const Api = API.createApi()
 /* ------------ sagas ----------- */

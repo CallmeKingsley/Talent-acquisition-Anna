@@ -19,9 +19,9 @@ const createApi = (baseURL = API_URL) => {
 
   const resetPassworddata = (data) => api.post('users/user/resetpassworddata', data)
 
-  const createApplication  = (data) => api.post('applicants/applicant',data)
+  const createApplication = (data) => api.post('applicants/applicant', data)
 
-  const getApplications = ()=> api.get('applicants/applicant')
+  const getApplications = () => api.get('applicants/applicant')
 
   return {
     createAccount,

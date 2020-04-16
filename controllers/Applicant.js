@@ -18,7 +18,7 @@ module.exports = {
         State: req.body.State,
         PreferedJob: req.body.PreferedJob,
         Resume: req.body.Resume,
-        DateCreated:  Date(),
+        DateCreated: Date(),
         Avaliablity: req.body.Avaliablity
       })
 
@@ -35,23 +35,23 @@ module.exports = {
       })
     }
   },
-  getApplication: async (req,res)=>{
-      try{
-        const errors = validationResult(req)
-        if (!errors.isEmpty()) {
-            return res.status(422).json({ errors: errors.array() })
-        }
-
-        const Allapplicant = await ApplicantModel.find({})
-        res.status(200).json({
-            Applications:Allapplicant
-        })
-      }catch(e){
-        console.log(e)
-        res.status(500).json({
-            user: e,
-            message: 'could\'t get Applications'
-        })
+  getApplication: async (req, res) => {
+    try {
+      const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        return res.status(422).json({ errors: errors.array() })
       }
+
+      const Allapplicant = await ApplicantModel.find({})
+      res.status(200).json({
+        Applications: Allapplicant
+      })
+    } catch (e) {
+      console.log(e)
+      res.status(500).json({
+        user: e,
+        message: 'could\'t get Applications'
+      })
+    }
   }
 }

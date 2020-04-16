@@ -15,7 +15,7 @@ class HomeScreen extends Component {
       <div>
         <NavBar authenticated />
         <h1>Home</h1>
-        <Home applicants = {this.props.applicants}/>
+        <Home applicants={this.props.applicants} />
       </div>
     )
   }
