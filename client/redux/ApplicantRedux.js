@@ -18,6 +18,7 @@ export const INITIAL_STATE = Immutable({
   loading: {
     applicant: null
   },
+  
   errors: {
     applicant: false
   }
