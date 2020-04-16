@@ -76,5 +76,8 @@
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.8",
     "webpack-dev-server": "^3.10.3"
+  },
+  "engines": {
+    "node": "10.13.0"
   }
 }
