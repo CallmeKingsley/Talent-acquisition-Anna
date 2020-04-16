@@ -1,4 +1,4 @@
-const ApplicantModel = require('../Models/Applicant')
+const ApplicantModel = require('../models/Applicant')
 const { validationResult } = require('express-validator')
 
 module.exports = {

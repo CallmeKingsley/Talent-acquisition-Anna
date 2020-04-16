@@ -1,5 +1,5 @@
-const TodoModel = require('../Models/Todo')
-const UserModel = require('../Models/User')
+const TodoModel = require('../models/Todo')
+const UserModel = require('../models/User')
 
 module.exports = {
 

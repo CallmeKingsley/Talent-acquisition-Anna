@@ -1,4 +1,4 @@
-const UserModel = require('../Models/User')
+const UserModel = require('../models/User')
 const { validationResult } = require('express-validator')
 const nodemailer = require('nodemailer')
 const { isNil } = require('ramda')
