@@ -11,11 +11,11 @@ const HTMLWebPackPluginConfig = new HTMLWebpackPlugin({
 module.exports = {
   entry: path.join(__dirname, '/client/index.js'),
   module: {
-    rules: [{
+    rules: [{ test: /\.css$/, use: 'css-loader' },{
       test: /\.js$/,
       exclude: /node_modules/,
       loader: 'babel-loader'
-    }, { test: /\.css$/, use: 'css-loader' },{
+    },{
       test: /\.svg$/,
       use: [
         {
@@ -25,7 +25,8 @@ module.exports = {
           },
         },
       ],
-    },]
+    },
+    ]
   },
   devServer: {
     watchContentBase: true
