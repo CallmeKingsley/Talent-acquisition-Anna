@@ -25,7 +25,13 @@ module.exports = {
           },
         },
       ],
-    },
+    },{
+      test: /\.(png|jpg|jpeg|gif|woff|woff2|ttf|eot)$/i,
+      loader: 'url-loader',
+      options: {
+        limit: 100000,
+      }
+      },
     ]
   },
   devServer: {

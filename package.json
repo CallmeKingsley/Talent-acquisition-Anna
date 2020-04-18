@@ -73,7 +73,8 @@
     "svg-url-loader": "^5.0.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.8",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "url-loader": "^4.1.0"
   },
   "engines": {
     "node": "10.13.0"
